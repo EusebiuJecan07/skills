@@ -89,7 +89,7 @@ Common `uip tm` (Test Manager) commands organized by resource type:
 | `uip tm executions run --execution-id <EXECUTION_ID> --project-key <PROJECT_KEY> --execution-type <TYPE>` | Re-run an existing test execution (optionally a subset via `--test-case-log-ids`). |
 | `uip tm executions retry --execution-id <EXECUTION_ID>` | Retry only the failed test cases of a finished execution. |
 | `uip tm executions list --project-key <PROJECT_KEY> [--test-set-id <TEST_SET_ID>]` | List top n executions for a project or a specific test set. |
-| `uip tm executions list-filtered --project-key <PROJECT_KEY>` | List executions with full filter set (labels, status, interval, ids, order-by). |
+| `uip tm executions list-filtered --project-key <PROJECT_KEY>` | List executions with full filter set (labels, status, interval, ids, sort-by). |
 | `uip tm executions testcaselogs list --execution-id <EXECUTION_ID> --project-key <PROJECT_KEY>` | List test case logs of an execution. |
 
 ### Testcaselog Commands
