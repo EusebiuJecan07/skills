@@ -29,10 +29,19 @@ if [[ $# -eq 0 ]]; then
   TASKS=(
     "$REPO_ROOT"/tests/tasks/uipath-platform/orchestrator/*.yaml
     "$REPO_ROOT"/tests/tasks/uipath-platform/resources/*.yaml
-    "$REPO_ROOT"/tests/tasks/uipath-platform/solution/*.yaml
+    "$REPO_ROOT"/tests/tasks/uipath-solution/operate/*.yaml
   )
 else
-  TASKS=("$@")
+  # Resolve user-passed paths to absolute (they may be relative to the
+  # caller's cwd; we `cd` below).
+  TASKS=()
+  for arg in "$@"; do
+    if [[ "$arg" = /* ]]; then
+      TASKS+=("$arg")
+    else
+      TASKS+=("$(cd "$(dirname "$arg")" && pwd)/$(basename "$arg")")
+    fi
+  done
 fi
 
 echo ">>> Running coder-eval with ${#TASKS[@]} task file(s)..."
