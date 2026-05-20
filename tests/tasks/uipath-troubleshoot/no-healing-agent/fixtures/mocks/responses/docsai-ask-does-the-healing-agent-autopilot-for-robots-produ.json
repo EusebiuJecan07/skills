@@ -1,0 +1,22 @@
+{
+  "Result": "Success",
+  "Code": "DocsAIAsk",
+  "Data": {
+    "query_id": "c21e9b7b-9595-46b5-997c-90a717e63c45",
+    "text": "Healing Agent (Autopilot for Robots) is tied to **processes executed as jobs**, not to ad‑hoc debug/run sessions from Studio.\n\nFrom the FAQ:  \n&gt; “Healing Agent is currently only available for **processes executed as jobs**. Healing Agent is **not available for other types of jobs, such as triggers or test cases**.”  \n\nThe docs do not mention Healing Agent running during Studio debug/run, nor producing healing-fixes.json or UIA telemetry in that context. All described flows (including downloading the debug file from Orchestrator and analyzing it in Studio via Autopilot) assume:\n\n- The automation was **published and executed as a job in Orchestrator**.\n- Healing Agent was **enabled at the process level**.\n- Healing actions/recommendations occurred during that job run.\n\nSo, based on the available documentation:\n\n- **Yes**, Healing Agent produces recovery data (debug file with healing info) for **eligible Orchestrator jobs**.\n- **No documented support** for generating that data when you just run or debug directly from Studio/StudioPro in attended mode without going through an Orchestrator job.\n\n---\n",
+    "sources": [
+      "https://docs-staging.uipath.com/agents/automation-suite/2.2510/user-guide-ha/frequently-asked-questions",
+      "https://docs-staging.uipath.com/agents/automation-suite/2.2510/user-guide-ha/setup",
+      "https://docs-staging.uipath.com/agents/automation-suite/2.2510/user-guide-ha/healing-agent-and-unified-target",
+      "https://docs-staging.uipath.com/activities/other/latest/ui-automation/release-notes-uipath-uiautomation-activities-v25-10"
+    ],
+    "disclaimers": [
+      "Installation and administration instructions, if incorrectly implemented, can result in system disruptions or data loss.\nVerify if your scenario aligns with the documentation sources linked for this answer. We recommend creating a backup before making any changes."
+    ],
+    "followups": [
+      "How can I configure a process so that Healing Agent is enabled when it runs as an Orchestrator job?",
+      "How do I download and interpret the Healing Agent debug file from Orchestrator?",
+      "What are the exact prerequisites (Robot, Studio, UIAutomation package versions) to use Healing Agent in my environment?"
+    ]
+  }
+}

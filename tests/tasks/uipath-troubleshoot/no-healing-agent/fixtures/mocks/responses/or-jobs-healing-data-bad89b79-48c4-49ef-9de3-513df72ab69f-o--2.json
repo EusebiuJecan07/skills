@@ -1,0 +1,35 @@
+[DEBUG] CLI v0.9.1 starting — output=json, logLevel=debug, logFile=none
+[DEBUG] Storage initialized
+[DEBUG] [AppInsights] NodeAppInsightsTelemetryProvider initialized
+[DEBUG] Telemetry initialized
+[DEBUG] [Telemetry] auth context populated at startup
+[DEBUG] Discovered tool 'solution-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'agent-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'codedapp-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'integrationservice-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'orchestrator-tool' v1.1.0 at 
+[DEBUG] Discovered tool 'rpa-tool' v1.0.0 at 
+[DEBUG] Discovered tool 'test-manager-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'api-workflow-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'maestro-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'docsai-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'vertical-solutions-tool' v0.9.0 at 
+[DEBUG] Discovered tool 'traces-tool' v0.9.0 at 
+[DEBUG] Discovered 12 tools: solution, agent, codedapp, is, or, rpa, tm, api-workflow, maestro, docsai, vss, traces
+[DEBUG] Program built successfully — ready to parse args
+[DEBUG] Node program built successfully — ready to parse args
+[DEBUG] Parsing args: or jobs healing-data bad89b79-48c4-49ef-9de3-513df72ab69f -o .investigation/raw/H1-healing-data-retry.zip
+[DEBUG] Loading tool 'orchestrator-tool'...
+[DEBUG] Loading tool 'orchestrator-tool' from 
+[DEBUG] Tool 'orchestrator-tool' loaded successfully (prefix: or, version: 1.1.0)
+{
+  "Result": "Success",
+  "Code": "JobHealingData",
+  "Data": {
+    "JobKey": "bad89b79-48c4-49ef-9de3-513df72ab69f",
+    "FileName": ".investigation/raw/H1-healing-data-retry.zip",
+    "Size": 22,
+    "ExportId": 269
+  }
+}
+[DEBUG] Command completed — flushing telemetry
