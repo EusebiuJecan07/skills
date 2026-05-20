@@ -213,15 +213,16 @@ jobs:
       # only carries the cut-release `latest` line which lags `main` by
       # days, so smoke against `@latest` was masking CLI changes that
       # task YAMLs and skills had already been updated for.
-      - name: Install uip CLI + admin tool (GitHub Packages @alpha)
+      # NOTE: @uipath/admin-tool is not yet in a stable CLI release;
+      # uipath-admin smoke tests tolerate "unknown command 'admin'".
+      - name: Install uip CLI (GitHub Packages @alpha — tracks cli/main)
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           npm config set @uipath:registry https://npm.pkg.github.com/
           npm config set //npm.pkg.github.com/:_authToken "$NODE_AUTH_TOKEN"
-          npm install -g @uipath/cli@alpha @uipath/admin-tool@alpha
+          npm install -g @uipath/cli@alpha
           uip --version
-          uip admin --help
 
       # Pre-auth uip via the CLI's documented env-var bypass so non-RPA
       # smoke tasks (orchestrator / integration-service / data-fabric / ...)

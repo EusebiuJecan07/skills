@@ -10,8 +10,6 @@ agent:
 
 run_limits:
   max_turns: 50
-  task_timeout: 500
-  turn_timeout: 500
 
 sandbox:
   driver: tempdir
