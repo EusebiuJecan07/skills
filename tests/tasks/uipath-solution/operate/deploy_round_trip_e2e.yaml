@@ -8,6 +8,7 @@ tags: [uipath-platform, e2e, mode:build, lifecycle:setup, solution]
 agent:
   type: claude-code
   allowed_tools: ["Skill", "Bash", "Read", "Write"]
+  turn_timeout: 600  # publish + deploy + uninstall on tenant exceeds default 300s
 
 sandbox:
   driver: tempdir

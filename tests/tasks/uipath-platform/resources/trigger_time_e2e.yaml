@@ -9,6 +9,7 @@ tags: [uipath-platform, e2e, mode:operate, lifecycle:setup, resources, triggers]
 agent:
   type: claude-code
   allowed_tools: ["Skill", "Bash", "Read", "Write"]
+  turn_timeout: 600  # agent occasionally explores trigger CLI surface — give it room
 
 sandbox:
   driver: tempdir
