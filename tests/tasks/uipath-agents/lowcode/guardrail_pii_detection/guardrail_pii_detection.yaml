@@ -6,13 +6,14 @@ description: >
   correct $guardrailType, validatorType, $parameterType discriminators,
   PascalCase entity names, enum-list and map-enum parameter types, and
   PascalCase scope values.
-tags: [uipath-agents, e2e, low-code, guardrail]
+tags: [uipath-agents, e2e, low-code]
 
 agent:
   type: claude-code
   permission_mode: acceptEdits
   allowed_tools: ["Skill", "Bash", "Read", "Write", "Edit", "Glob", "Grep"]
-  max_turns: 30
+
+run_limits:
   turn_timeout: 1200
 
 sandbox:
